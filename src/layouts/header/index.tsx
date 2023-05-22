@@ -6,7 +6,7 @@ import { Inter } from 'next/font/google'
 import Link from 'next/link'
 
 //components
-import CartCounter from '@/components/cart/counter'
+// import CartCounter from '@/components/cart/counter'
 
 const Header = () => {
     return (
@@ -35,7 +35,7 @@ const Header = () => {
                         </Link>
                     </li>
                 </ul>
-                <CartCounter />
+                {/* <CartCounter /> */}
             </header>
         </>
     )

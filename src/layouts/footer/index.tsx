@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import s from './footer.module.scss'
 import Link from 'next/link'
-import { useForm, Resolver } from "react-hook-form";
+import { useForm, Resolver} from "react-hook-form";
 
 // Image
 import FooterLogo from '../../assets/footer/FooterLogo.svg'

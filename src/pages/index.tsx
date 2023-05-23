@@ -2,8 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+//components
 import HotelAmenities from '@/components/HotelAmenities/HotelAmenities'
 import Guestrooms from '@/components/Guestrooms/Guestrooms'
+import Hero from '@/components/Hero'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +19,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={`${styles.main} ${inter.className}`}>
+                <Hero></Hero>
 				<HotelAmenities />
 				<Guestrooms />
 			</main>

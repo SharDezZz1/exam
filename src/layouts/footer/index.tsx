@@ -1,25 +1,48 @@
 import React, { useState } from 'react'
 import s from './footer.module.scss'
 import Link from 'next/link'
+import { useForm, Resolver } from "react-hook-form";
 
 // Image
 import FooterLogo from '../../assets/footer/FooterLogo.svg'
-import Instragram from '../../assets/footer/i-instagram.svg'
+import Instagram from '../../assets/footer/i-instagram.svg'
 import Twitter from '../../assets/footer/i-twitter.svg'
 import FaceBook from '../../assets/footer/i-fb.svg'
 
+type FormValues = {
+	Email: string;
+};
 
+const resolver: Resolver<FormValues> = async (values) => {
+	return {
+		values: !values.Email ? {} : values,
+		errors: !values.Email
+			? {
+				Email: {
+					type: "required",
+					message: "This is required."
+				}
+			}
+			: {}
+	};
+};
 const Footer = () => {
-	const [email, setEmail] = useState('');
 
-	const handleInputChange = (event: any) => {
-		setEmail(event.target.value);
-	};
 
-	const handleSubmit = (event: any) => {
-		event.preventDefault();
-		console.log(email);
-	};
+	/**
+	 * FORM
+	 */
+	const {
+		register,
+		handleSubmit,
+		formState: { errors }
+	} = useForm<FormValues>({
+		resolver: resolver
+	});
+	const onSubmit = handleSubmit((data) => alert(JSON.stringify(data)));
+
+
+
 	return (
 		<>
 			<footer className={s.footer}>
@@ -27,21 +50,36 @@ const Footer = () => {
 					<img src={FooterLogo} alt="Cornell" />
 				</div>
 				<div className={s.footer__center}>
-					<form className={s.footer__center_regictration} onSubmit={handleSubmit}>
+					<form className={s.footer__center_registration} onSubmit={onSubmit}>
+						<div>
+						
+							<input
+								className={`${s.registration__input} ${errors?.Email ? s.error : ''}`}
+								{...register("Email")}
+								placeholder="Email"
+							/>
+								{/* <p>{errors?.Email?.message}</p> */}
+						</div>
+						<button className={s.registration__button} type="submit">
+							join our newsletter
+						</button>
+					</form>
+					{/* <form className={s.footer__center_registration} onSubmit={handleSubmit}>
 						<input
 							type="text"
-							className={s.regictration__input}
+							className={inputClassName}
 							placeholder="Email"
 							value={email}
 							onChange={handleInputChange}
 						/>
-						<button type="submit" className={s.regictration__button}>
+						<button type="submit" className={s.registration__button}>
 							join our newsletter
 						</button>
-					</form>
-					{/* <div className={s.footer__center_regictration}>
-						<input type="text" className={s.regictration__input} placeholder="Email" />
-						<button className={s.regictration__button}>join our newsletter</button>
+					</form> */}
+
+					{/* <div className={s.footer__center_registration}>
+						<input type="text" className={s.registration__input} placeholder="Email" />
+						<button className={s.registration__button}>join our newsletter</button>
 					</div> */}
 					<ul className={s.footer__center_nav}>
 						<li>Discover</li>
@@ -67,9 +105,9 @@ const Footer = () => {
 							</ul>
 						</div>
 						<div className={s.footer__right_social}>
-							<a href="/"><img src={Twitter} alt="Twitter" /></a>
-							<a href="/"><img src={Instragram} alt="Instragram" /></a>
-							<a href="/"><img src={FaceBook} alt="FaceBook" /></a>
+							<Link href="/"><img src={Twitter} alt="Twitter" /></Link>
+							<Link href="/"><img src={Instagram} alt="Instagram" /></Link>
+							<Link href="/"><img src={FaceBook} alt="FaceBook" /></Link>
 						</div>
 					</div>
 					<div className={s.footer__right_copyright}>

@@ -8,18 +8,16 @@
 	justify-content: center;
 	position: relative;
 	top: 225px;
-img{
-	@media only screen and (max-width: 768px) {
-		width: 80%;
-		
+	img {
+		@media only screen and (max-width: 768px) {
+			width: 80%;
+		}
 	}
-}
 }
 .swiper__container {
 	margin: 0 24px;
 	margin-top: 300px;
 	@media only screen and (max-width: 568px) {
-		
 		margin-top: 200px;
 	}
 }
@@ -48,6 +46,7 @@ img{
 	text-transform: uppercase;
 }
 //
+
 .image__overlay {
 	position: absolute;
 	top: 44px;

@@ -1,11 +1,54 @@
 .header {
-    color: red;
-    background-color: aqua;
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    width: 80%;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 10px 0 10px;
+    z-index: 999;
+
 
     .nav {
-        color: blue;
         display: flex;
         list-style-type: none;
         gap:  20px;
+        margin: 0;
+
+        &__item {
+            text-decoration: none;
+            &_link {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        &__item:hover {
+            transform: scale(110%);
+            transition: 0.5s;
+        }
+
+        &__item:nth-last-child(n) {
+            color: #C8BD90;
+
+        }
+    }
+
+    .book_btn {
+        height: 80%;
+        border: none;
+        background-color: #C8BD90;
+        width: 137px;
+        color: white;
+    }
+
+    .book_btn:hover {
+        transform: scale(110%);
+        transition: 0.5s;
     }
 }

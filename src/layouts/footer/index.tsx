@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import s from './footer.module.scss'
 import Link from 'next/link'
-import { useForm, Resolver} from "react-hook-form";
+import { useForm, Resolver } from "react-hook-form";
 
 // Image
+import Image from 'next/image';
 import FooterLogo from '../../assets/footer/FooterLogo.svg'
 import Instagram from '../../assets/footer/i-instagram.svg'
 import Twitter from '../../assets/footer/i-twitter.svg'
@@ -20,7 +21,7 @@ const resolver: Resolver<FormValues> = async (values) => {
 			? {
 				Email: {
 					type: "required",
-					message: "This is required."
+					message: "Please supply your email address"
 				}
 			}
 			: {}
@@ -46,19 +47,18 @@ const Footer = () => {
 	return (
 		<>
 			<footer className={s.footer}>
-				<div>
-					<img src={FooterLogo} alt="Cornell" />
+				<div className={s.footer__left}>
+					<Image src={FooterLogo} alt="Cornell" />
 				</div>
 				<div className={s.footer__center}>
 					<form className={s.footer__center_registration} onSubmit={onSubmit}>
 						<div>
-						
 							<input
 								className={`${s.registration__input} ${errors?.Email ? s.error : ''}`}
 								{...register("Email")}
 								placeholder="Email"
 							/>
-								{/* <p>{errors?.Email?.message}</p> */}
+							<p className={s.error}>{errors?.Email?.message}</p>
 						</div>
 						<button className={s.registration__button} type="submit">
 							join our newsletter
@@ -105,9 +105,9 @@ const Footer = () => {
 							</ul>
 						</div>
 						<div className={s.footer__right_social}>
-							<Link href="/"><img src={Twitter} alt="Twitter" /></Link>
-							<Link href="/"><img src={Instagram} alt="Instagram" /></Link>
-							<Link href="/"><img src={FaceBook} alt="FaceBook" /></Link>
+							<Link className={s.social__item} href="/"><Image src={Twitter} alt="Twitter" /></Link>
+							<Link className={s.social__item} href="/"><Image  src={Instagram} alt="Instagram" /></Link>
+							<Link className={s.social__item} href="/"><Image src={FaceBook} alt="FaceBook" /></Link>
 						</div>
 					</div>
 					<div className={s.footer__right_copyright}>

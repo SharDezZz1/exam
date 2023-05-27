@@ -3,17 +3,16 @@
 	position: relative;
 	bottom: 0;
 	width: 100%;
-	padding: 100px 172px 0 172px;
+	padding: 40px;
 	height: 356px;
 	display: flex;
 	justify-content: space-between;
-	@media only screen and (max-width: 1400px) {
-		padding: 70px;
-	}
+	align-items: baseline;
+	gap: 50px;
 	@media only screen and (max-width: 1200px) {
-		padding: 50px;
+		padding: 20px 50px;
 	}
-	@media only screen and (max-width: 780px) {
+	@media only screen and (max-width: 992px) {
 		display: block;
 		padding: 30px 20px;
 		height: auto;
@@ -23,6 +22,18 @@
 		color: #ffffff;
 		padding-left: 0;
 	}
+	// footer__left
+
+	&__left {
+		width: 30%;
+		@media only screen and (max-width: 1200px) {
+			width: auto;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	// footer__center
 
 	&__center {
 		display: flex;
@@ -37,6 +48,9 @@
 		}
 		&_registration {
 			display: flex;
+			@media only screen and (max-width: 1200px) {
+				flex-direction: column;
+			}
 			@media only screen and (max-width: 500px) {
 				flex-direction: column;
 				gap: 20px;
@@ -44,27 +58,26 @@
 			}
 			.registration__input {
 				width: 290px;
-				height: 100%;
+				height: 48px;
 				background-color: transparent;
 				border: none;
 				border-bottom: 1px solid #ffffff;
 				margin-right: 10px;
 				color: #ffffff;
 				@media only screen and (max-width: 1200px) {
-					width: 95%;
-					margin-right: 100px;
-				}
-				@media only screen and (max-width: 780px) {
-					width: 95%;
-				margin-right: 200px;
-				}
-				@media only screen and (max-width: 500px){
 					width: 100%;
+				}
+
+				@media only screen and (max-width: 780px) {
 					margin-right: 0;
 				}
+
 				&::placeholder {
 					color: #ffffff;
 				}
+			}
+			.error {
+				color: red;
 			}
 			.registration__input:focus {
 				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -81,15 +94,12 @@
 				color: #ffffff;
 				cursor: pointer;
 				transition: background 0.6s ease;
-				@media only screen and (max-width: 500px) {
+				@media only screen and (max-width: 1200px) {
 					width: 100%;
 				}
 				&:hover {
 					background: rgba(255, 255, 255, 0.4);
 				}
-			}
-			.red {
-				border: 1px solid red;
 			}
 		}
 
@@ -99,14 +109,18 @@
 			margin-top: 60px;
 			padding: 0;
 			gap: 24px;
-			@media only screen and (max-width: 1200px) {
+			@media only screen and (max-width: 1500px) {
 				flex-wrap: wrap;
+				margin-top: 10px;
+				gap: 30px;
 			}
-			@media only screen and (max-width: 780px) {
-				margin: 30px 0;
+			@media only screen and (max-width: 992px) {
+				margin: 30px 0 0 0;
+				justify-content: center;
 			}
 			@media only screen and (max-width: 500px) {
-				justify-content: space-around;
+				flex-direction: column;
+				align-items: center;
 			}
 
 			li {
@@ -114,8 +128,13 @@
 				font-weight: 500;
 				font-style: normal;
 				text-transform: uppercase;
-				@media only screen and (max-width: 500px) {
-					width: 45%;
+				cursor: pointer;
+				transition: color .2s ease-in;
+				&:hover{
+					color: #bab7b7;
+				}
+				@media only screen and (max-width: 992px) {
+					font-size: 18px;
 				}
 			}
 		}
@@ -124,15 +143,22 @@
 			margin-top: 48px;
 			@media only screen and (max-width: 1200px) {
 				text-align: center;
+				margin-top: 20px;
 			}
-			@media only screen and (max-width: 780px) {
+			@media only screen and (max-width: 992px) {
 				display: none;
 			}
 		}
 	}
+
+	// footer__right
+
 	&__right {
+		@media only screen and (max-width: 992px) {
+			margin-top: 30px;
+		}
 		&_wrapper {
-			@media only screen and (max-width: 780px) {
+			@media only screen and (max-width: 992px) {
 				display: flex;
 				justify-content: space-between;
 				gap: 20px;
@@ -147,11 +173,22 @@
 			margin-top: 60px;
 			display: flex;
 			gap: 26px;
-			@media only screen and (max-width: 780px) {
+
+			@media only screen and (max-width: 992px) {
+				margin-top: 40px;
+			}
+			@media only screen and (max-width: 992px) {
 				margin-top: 0;
 				display: flex;
 				flex-direction: column;
 				gap: 17px;
+			}
+			.social__item {
+				transition: opacity 0.2s ease-in-out;
+			}
+
+			.social__item:hover {
+				opacity: 0.7;
 			}
 			a {
 				text-decoration: none;
@@ -162,7 +199,7 @@
 			margin-top: 30px;
 			color: #ffffff;
 			text-align: center;
-			@media only screen and (min-width: 780px) {
+			@media only screen and (min-width: 992px) {
 				display: none;
 			}
 		}

@@ -6,6 +6,8 @@ import styles from '@/styles/Home.module.css'
 import HotelAmenities from '@/components/HotelAmenities/HotelAmenities'
 import Guestrooms from '@/components/Guestrooms/Guestrooms'
 import Hero from '@/components/Hero'
+import Decoration from '@/components/Decoration/Decoration'
+import PanelSection from '@/components/PanelSection/PanelSection'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +24,8 @@ export default function Home() {
                 <Hero></Hero>
 				<HotelAmenities />
 				<Guestrooms />
+				<Decoration/>
+				<PanelSection/>
 			</main>
 		</>
 	)

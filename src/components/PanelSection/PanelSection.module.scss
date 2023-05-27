@@ -71,7 +71,11 @@
 	#btn_prev,
 	#btn_next {
 		width: 48px;
+		display: flex;
 		height: 48px;
+		justify-content: center;
+		align-items: center;
 		background-color: #213357;
 	}
 }
+

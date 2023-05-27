@@ -8,22 +8,30 @@ import PanelItemImg from '../../assets/PanelSection/PanelItemImg.png'
 
 // 
 
-import SwiperArrowPrew from '../../assets/Guestrooms/SwiperArrowPrew.svg'
-import SwiperArrowNext from '../../assets/Guestrooms/SwiperArrowNext.svg'
+import SwiperArrowPrev from '../../assets/PanelSection/PanelSection__prev.svg'
+import SwiperArrowNext from '../../assets/PanelSection/PanelSection__next.svg'
 // 
 
 // swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
-import "swiper/css";
+import "swiper/scss";
 // import "swiper/css/pagination";
 import "swiper/css/navigation";
+import 'swiper/scss/pagination';
+
+
 
 const PanelSection = () => {
 	const customNavigation = {
 		nextEl: ".custom-swiper-button-next",
 		prevEl: ".custom-swiper-button-prev",
 	};
+
+
+	// 
+
+
 	return (
 		<>
 			<section className={s.grid__container}>
@@ -73,14 +81,16 @@ const PanelSection = () => {
 						<Swiper
 							slidesPerView={1}
 							navigation={customNavigation}
-							pagination={{ type: "fraction" }}
+							pagination={{
+								type: "fraction",
+							}}
 							modules={[Pagination, Navigation]}
 							className="swiper"
 
 						>
 							<SwiperSlide className={s.swiper__slide} >
 								<div className={s.slide__top}>
-									<Image  src={PanelImg} alt="Зображення 2" />
+									<Image src={PanelImg} alt="Зображення 2" />
 									<Image src={PanelItemImg} alt='PanelItemImg' />
 								</div>
 								<div className={s.slide__bottom}>
@@ -105,10 +115,11 @@ const PanelSection = () => {
 							</SwiperSlide>
 							<div className={s.swiper__navigation}>
 								<div id={s.btn_prev} className={`custom-swiper-button-prev`}>
-									<Image src={SwiperArrowPrew} alt='SwiperArrowPrew' />
+
+									<Image src={SwiperArrowNext} alt='SwiperArrowNext' />
 								</div>
 								<div id={s.btn_next} className={`custom-swiper-button-next`}>
-									<Image src={SwiperArrowNext} alt='SwiperArrowNext' />
+									<Image src={SwiperArrowPrev} alt='SwiperArrowPrev' />
 								</div>
 							</div>
 

@@ -53,7 +53,7 @@ const Footer = () => {
 				<div className={s.footer__center}>
 					<form className={s.footer__center_registration} onSubmit={onSubmit}>
 						<div>
-							<input
+							<input type={'email'}
 								className={`${s.registration__input} ${errors?.Email ? s.error : ''}`}
 								{...register("Email")}
 								placeholder="Email"

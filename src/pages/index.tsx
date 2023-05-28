@@ -9,6 +9,9 @@ import Hero from '@/components/Hero'
 import Decoration from '@/components/Decoration/Decoration'
 import PanelSection from '@/components/PanelSection/PanelSection'
 
+// library Semantic UI
+import 'semantic-ui-css/semantic.min.css'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {

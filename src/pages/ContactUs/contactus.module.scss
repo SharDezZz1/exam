@@ -13,10 +13,7 @@
 		}
 	}
 	.contact {
-		background-image: url("../../assets/ContactUs/ContactUs__map.png");
-		background-size: cover;
-		background-repeat: no-repeat;
-		height: 638px;
+		position: relative;
 		margin: 160px 190px 0 190px;
 		@media only screen and (max-width: 1200px) {
 			margin: 120px 100px 0 100px;
@@ -28,21 +25,33 @@
 			margin: 120px 5px 0 5px;
 		}
 		&__info {
-			position: relative;
+			position: absolute;
+			width: 75%;
 			top: -90px;
 			background-color: #fff;
 			margin: 0 160px;
 			height: 460px;
 			text-align: center;
+			z-index: 2;
+			@media only screen and (max-width: 1600px) {
+				width: 71%;
+			}
+			@media only screen and (max-width: 1100px) {
+				margin: 0 0 0 130px;
+				height: 400px;
+			}
+
 			@media only screen and (max-width: 992px) {
 				margin: 0 100px;
 				height: 400px;
 			}
 			@media only screen and (max-width: 768px) {
 				margin: 0;
+				width: 100%;
 			}
 			@media only screen and (max-width: 576px) {
 				height: 300px;
+				top: 0;
 			}
 			.contact__info_text {
 				padding: 90px 10px 0 10px;
@@ -57,84 +66,18 @@
 				letter-spacing: 0.1em;
 			}
 		}
-	}
-	.registration {
-		background-color: #fff;
-		width: 760px;
-		height: 576px;
-		margin: 90px auto 100px auto;
-		@media only screen and (max-width: 768px) {
+		&__map {
 			width: 100%;
-		}
-		@media only screen and (max-width: 576px) {
-			margin: 60px auto;
-		}
-
-		&__title {
-			text-transform: uppercase;
-			padding-top: 70px;
-			color: #c8bd90;
-			font-weight: 400;
-			font-size: 36px;
-			text-align: center;
-		}
-		&__form {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			width: 100%;
-			.form__input {
-				margin-top: 60px;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				@media only screen and (max-width: 768px) {
-					width: 90%;
-				}
+			z-index: 1;
+			position: relative;
+			transition: border 0.2s ease-in;
+			&:hover {
+				border: 1px solid grey;
+				z-index: 2;
+			}
+			@media only screen and (max-width: 576px) {
+				height: 700px;
 			}
 		}
-	}
-}
-
-.registration__input {
-	width: 616px;
-	height: 48px;
-	background-color: transparent;
-	border: none;
-	border-bottom: 1px solid #d3d3d3;
-	margin-right: 10px;
-	color: #ffffff;
-
-	@media only screen and (max-width: 780px) {
-		margin-right: 0;
-		width: 100%;
-	}
-
-	&::placeholder {
-		color: #d3d3d3;
-		text-align: center;
-	}
-}
-
-.registration__input:focus {
-	border-bottom: 1px solid #837c7c;
-	outline: none;
-	box-shadow: none;
-	color: #d3d3d3;
-}
-
-.registration__button {
-	width: 156px;
-	height: 48px;
-	background: #c8bd90;
-	border: none;
-	color: #ffffff;
-	cursor: pointer;
-	text-transform: uppercase;
-	transition: background 0.6s ease;
-	margin-top: 50px;
-	&:hover {
-		background: #d8c67c;
 	}
 }

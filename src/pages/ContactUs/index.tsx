@@ -6,39 +6,21 @@ import s from './contactus.module.scss'
 import Image from 'next/image'
 import contactTitlte from '../../assets/ContactUs/ContactUs__title.svg'
 
+import Form from '../../components/Form/Form'
+
 
 
 
 const ContactUs = () => {
-	const [name, setName] = useState('');
-	const [email, setEmail] = useState('');
-	const [message, setMessage] = useState('');
 
-	const handleSubmit = (event: any) => {
-		event.preventDefault();
-
-		// Перевірка наявності даних у полях
-		if (name === '' || email === '' || message === '') {
-			// Якщо одне з полів є порожнім, не відправляємо дані
-			console.log('Please fill in all fields');
-			return;
-		}
-
-		// Логіка для обробки даних
-		console.log('Name:', name);
-		console.log('Email:', email);
-		console.log('Message:', message);
-
-		// Очистка полів після відправки даних
-		setName('');
-		setEmail('');
-		setMessage('');
-	};
 	return (
 		<>
 			<section className={s.background}>
 				<div className={s.title}>
 					<Image src={contactTitlte} alt='contactTitlte' />
+				</div>
+				<div>
+
 				</div>
 				<div className={s.contact}>
 					<div className={s.contact__info}>
@@ -49,40 +31,10 @@ const ContactUs = () => {
 							<p>715 Bush Street, San Francisco, 94108</p>
 						</div>
 					</div>
+					<iframe className={s.contact__map} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41583.58665283108!2d23.46877098083496!3d49.35263752600823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473a4ea0486881a9%3A0x4f36a7de394df480!2z0KDQsNGE0ZbQvdC10YDRltGP!5e0!3m2!1suk!2sua!4v1685272121482!5m2!1suk!2sua" width="1200" height="600"
+					></iframe>
 				</div>
-				<div className={s.registration}>
-					<h2 className={s.registration__title}>write us</h2>
-					<form className={s.registration__form} onSubmit={handleSubmit}>
-						<div className={s.form__input}>
-							<input
-								className={s.registration__input}
-								placeholder="Your Name"
-								value={name}
-								onChange={(event) => setName(event.target.value)}
-							/>
-							<p>{ }</p>
-
-							<input type={'email'}
-								className={s.registration__input}
-								placeholder="Your Email"
-								value={email}
-								onChange={(event) => setEmail(event.target.value)}
-							/>
-							<p>{ }</p>
-
-							<input
-								className={s.registration__input}
-								placeholder="Your Message"
-								value={message}
-								onChange={(event) => setMessage(event.target.value)}
-							/>
-							<p>{ }</p>
-						</div>
-						<button className={s.registration__button} type="submit">
-							submit
-						</button>
-					</form>
-				</div>
+				<Form />
 			</section>
 		</>
 	)

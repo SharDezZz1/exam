@@ -13,7 +13,7 @@ type FormValues = {
 
 const resolver: Resolver<FormValues> = async (values) => {
   return {
-    values: !values.ArrivalDate ? {}: values,
+    values: !values.ArrivalDate ? {} : values,
     errors: !values.ArrivalDate ? {
       ArrivalDate: {
         type: "required",
@@ -22,8 +22,16 @@ const resolver: Resolver<FormValues> = async (values) => {
       DepartuureDate: {
         type: "required",
         message: "Please supply departuure date"
-      }
-    }: {},
+      },
+      Adults: {
+        type: "required",
+        message: "Please supply adultsd"
+      },
+      Children: {
+        type: "required",
+        message: "Please supply children"
+      },
+    } : {},
   };
 };
 
@@ -47,7 +55,7 @@ const CheckAvailability = () => {
           <div className={s.form__block}>
             <label className={s.form__block_label}>Arrival date</label>
             <input className={`${s.form__block_input} ${errors?.ArrivalDate ? s.error : ''}`} type="date" {...register("ArrivalDate")}
-								placeholder="Email"/>
+              placeholder="Email" />
             <p className={s.error}>{errors?.ArrivalDate?.message}</p>
           </div>
           <div className={s.form__block}>
@@ -57,13 +65,13 @@ const CheckAvailability = () => {
           </div>
           <div className={s.form__block}>
             <label className={s.form__block_label}>Adults</label>
-            <input className={s.form__block_input} type="text" />
-            <p className={s.error}>{errors?.ArrivalDate?.message}</p>
+            <input className={`${s.form__block_input} ${errors?.Adults ? s.error : ''}`} type="text" {...register("Adults")} />
+            <p className={s.error}>{errors?.Adults?.message}</p>
           </div>
           <div className={s.form__block}>
             <label className={s.form__block_label}>Children</label>
-            <input className={s.form__block_input} type="text" />
-            <p className={s.error}>{errors?.ArrivalDate?.message}</p>
+            <input className={`${s.form__block_input} ${errors?.Children ? s.error : ''}`} type="text" {...register("Children")} />
+            <p className={s.error}>{errors?.Children?.message}</p>
           </div>
           <button className={s.form__button} type="submit">CHECK AVAILABILITY</button>
         </form>

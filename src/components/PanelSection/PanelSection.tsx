@@ -18,7 +18,7 @@ import { Pagination, Navigation } from "swiper";
 import "swiper/scss";
 // import "swiper/css/pagination";
 import "swiper/css/navigation";
-import 'swiper/scss/pagination';
+// import 'swiper/scss/pagination';
 
 
 

@@ -10,7 +10,7 @@ import Decoration from '@/components/Decoration/Decoration'
 import PanelSection from '@/components/PanelSection/PanelSection'
 
 // library Semantic UI
-import 'semantic-ui-css/semantic.min.css'
+// import 'semantic-ui-css/semantic.min.css'
 
 const inter = Inter({ subsets: ['latin'] })
 

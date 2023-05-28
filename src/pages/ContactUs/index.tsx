@@ -4,7 +4,7 @@ import s from './contactus.module.scss'
 
 // img
 import Image from 'next/image'
-import contactTitlte from '../../assets/ContactUs/ContactUs__title.svg'
+import contactTitle from '../../assets/ContactUs/ContactUs__title.svg'
 
 import Form from '../../components/Form/Form'
 
@@ -17,7 +17,7 @@ const ContactUs = () => {
 		<>
 			<section className={s.background}>
 				<div className={s.title}>
-					<Image src={contactTitlte} alt='contactTitlte' />
+					<Image src={contactTitle} alt='contactTitle' />
 				</div>
 				<div>
 

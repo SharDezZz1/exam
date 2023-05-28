@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 //futures
+import roomsReduser from "@/store/features/Rooms"
+import discoverReduser from '@/store/features/Discover'
 
 export const store = configureStore({
   reducer: {
+    rooms: roomsReduser,
+    discover: discoverReduser
   },
 })
 

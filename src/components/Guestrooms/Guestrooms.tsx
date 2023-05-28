@@ -7,11 +7,11 @@ import SwiperCore, { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/swiper.min.css";
 import s from "./Guestrooms.module.scss";
-import iconTop from "../../assets/Guestrooms/icon__top.svg";
-import SwiperArrowPrew from '../../assets/Guestrooms/SwiperArrowPrew.svg'
-import SwiperArrowNext from '../../assets/Guestrooms/SwiperArrowNext.svg'
+import iconTop from "../../assets/MainPage/Guestrooms/icon__top.svg";
+import SwiperArrowPrew from '../../assets/MainPage/Guestrooms/SwiperArrowPrew.svg'
+import SwiperArrowNext from '../../assets/MainPage/Guestrooms/SwiperArrowNext.svg'
 import Link from "next/link";
-import SwiperImage from "../../assets/Guestrooms/swiper__images.png";
+import SwiperImage from "../../assets/MainPage/Guestrooms/swiper__images.png";
 
 SwiperCore.use([Navigation, Pagination]);
 

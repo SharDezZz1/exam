@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from "next/image"
 //images
-import vec1 from "../../assets/hero/Vector.png"
-import vec2 from "../../assets/hero/Vector-1.png"
+import vec1 from "../../assets/MainPage/hero/Vector.png"
+import vec2 from "../../assets/MainPage/hero/Vector-1.png"
 //styles
 import s from "./hero.module.scss"
 //components

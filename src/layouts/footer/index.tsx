@@ -5,10 +5,10 @@ import { useForm, Resolver } from "react-hook-form";
 
 // Image
 import Image from 'next/image';
-import FooterLogo from '../../assets/footer/FooterLogo.svg'
-import Instagram from '../../assets/footer/i-instagram.svg'
-import Twitter from '../../assets/footer/i-twitter.svg'
-import FaceBook from '../../assets/footer/i-fb.svg'
+import FooterLogo from '../../assets/Layouts/footer/FooterLogo.svg'
+import Instagram from '../../assets/Layouts/footer/i-instagram.svg'
+import Twitter from '../../assets/Layouts/footer/i-twitter.svg'
+import FaceBook from '../../assets/Layouts/footer/i-fb.svg'
 
 type FormValues = {
 	Email: string;

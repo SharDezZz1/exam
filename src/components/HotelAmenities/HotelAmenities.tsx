@@ -3,8 +3,8 @@ import s from './HotelAmenities.module.scss'
 
 // img
 import Image from 'next/image'
-import imgTop from '../../assets/HotelAmenities/img__top.svg'
-import imgHotel from '../../assets/HotelAmenities/HotelAmenities_main.png'
+import imgTop from '../../assets/MainPage/HotelAmenities/img__top.svg'
+import imgHotel from '../../assets/MainPage/HotelAmenities/HotelAmenities_main.png'
 
 const HotelAmenities = () => {
 	return (

@@ -3,13 +3,13 @@ import s from './PanelSection.module.scss'
 
 // img
 import Image from 'next/image'
-import PanelImg from '../../assets/PanelSection/PanelSection__img.png'
-import PanelItemImg from '../../assets/PanelSection/PanelItemImg.png'
+import PanelImg from '../../assets/MainPage/PanelSection/PanelSection__img.png'
+import PanelItemImg from '../../assets/MainPage/PanelSection/PanelItemImg.png'
 
 // 
 
-import SwiperArrowPrev from '../../assets/PanelSection/PanelSection__prev.svg'
-import SwiperArrowNext from '../../assets/PanelSection/PanelSection__next.svg'
+import SwiperArrowPrev from '../../assets/MainPage/PanelSection/PanelSection__prev.svg'
+import SwiperArrowNext from '../../assets/MainPage/PanelSection/PanelSection__next.svg'
 // 
 
 // swiper

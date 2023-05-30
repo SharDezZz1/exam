@@ -1,34 +1,81 @@
 import React from 'react'
 import s from './Specials.module.scss'
 
-// img
+// img 
 import Image from 'next/image'
-import HeaderImg from '../../assets/Specials/Specials__header.png'
+import HeaderImg from '../../assets/Specials/HeaderImg.png'
+import Icon from '../../assets/Specials/Icon.svg'
+import cardImg1 from '../../assets/Specials/card__img1.png'
+import cardImg2 from '../../assets/Specials/card__img2.png'
+import cardImg3 from '../../assets/Specials/card__img3.png'
+
 const index = () => {
 	return (
 		<>
-		//!
-		//! цей код  при нажиманні на карточку
-		//!
 			<section className={s.specials}>
 				<div className={s.specials__top}>
 					<Image src={HeaderImg} alt='HeaderImg' />
 				</div>
 				<div className={s.specials__bottom}>
-					<div className={s.title}>
-						<h3>BOOK DIRECT AND SAVE 10%</h3>
+					<div className={s.banner}>
+						<Image className={s.banner__img} src={Icon} alt='Icon' />
+						<div className={s.banner__title}>Get the Best Deals on Your Next Stay</div>
+						<div className={s.banner__subtitle}>he good life gets even better when you save a little on your stay. Find a deal that
+							works for you and get ready to experience the most romantic hotel in San Francisco
+						</div>
 					</div>
-					<div className={s.subtitle}>
-						<p>Lorem ipsum dolor sit amet consectetur. Volutpat id fusce gravida mattis lacus. Gravida posuere.</p>
+					<div className={s.cards}>
+						<div className={s.card}>
+							<Image className={s.card__img} src={cardImg1} alt='cardImg' />
+							<div className={s.card__content}>
+								<h4>BOOK DIRECT AND SAVE 10%</h4>
+								<p>Lorem ipsum dolor sit amet consectetur. Pretium a congue sagittis amet.</p>
+								<button>LEARN MORE</button>
+							</div>
+						</div>
+						<div className={s.card}>
+							<Image className={s.card__img} src={cardImg1} alt='cardImg' />
+							<div className={s.card__content}>
+								<h4>BOOK DIRECT AND SAVE 10%</h4>
+								<p>Lorem ipsum dolor sit amet consectetur. Pretium a congue sagittis amet.</p>
+								<button>LEARN MORE</button>
+							</div>
+						</div>
+						<div className={s.card}>
+							<Image className={s.card__img} src={cardImg1} alt='cardImg' />
+							<div className={s.card__content}>
+								<h4>BOOK DIRECT AND SAVE 10%</h4>
+								<p>Lorem ipsum dolor sit amet consectetur. Pretium a congue sagittis amet.</p>
+								<button>LEARN MORE</button>
+							</div>
+						</div>
+						<div className={s.card}>
+							<Image className={s.card__img} src={cardImg1} alt='cardImg' />
+							<div className={s.card__content}>
+								<h4>BOOK DIRECT AND SAVE 10%</h4>
+								<p>Lorem ipsum dolor sit amet consectetur. Pretium a congue sagittis amet.</p>
+								<button>LEARN MORE</button>
+							</div>
+						</div>
+						<div className={s.card}>
+							<Image className={s.card__img} src={cardImg1} alt='cardImg' />
+							<div className={s.card__content}>
+								<h4>BOOK DIRECT AND SAVE 10%</h4>
+								<p>Lorem ipsum dolor sit amet consectetur. Pretium a congue sagittis amet.</p>
+								<button>LEARN MORE</button>
+							</div>
+						</div>
+						<div className={s.card}>
+							<Image className={s.card__img} src={cardImg1} alt='cardImg' />
+							<div className={s.card__content}>
+								<h4>BOOK DIRECT AND SAVE 10%</h4>
+								<p>Lorem ipsum dolor sit amet consectetur. Pretium a congue sagittis amet.</p>
+								<button>LEARN MORE</button>
+							</div>
+						</div>
 					</div>
-					<div className={s.text}>
-						Lorem ipsum dolor sit amet consectetur. Risus eu massa sed tellus tincidunt aliquet aliquam platea ultrices. Bibendum laoreet morbi dui a elit id nec in. Nec nec turpis diam praesent sit morbi. Nulla magna non tempor vel potenti sit amet. Habitant suspendisse velit sed amet. Purus egestas vitae at velit nunc etiam placerat ut. Ante turpis amet venenatis nulla euismod.
-					</div>
-					<div className={s.button}>
-						<button className={s.btn}>Book now</button>
-					</div>
-				</div>
 
+				</div>
 			</section>
 		</>
 	)

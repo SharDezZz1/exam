@@ -17,7 +17,7 @@ const index = () => {
 				<div className={s.blog__top}>
 					<Image src={BlogHeader} alt='HeaderImg' />
 				</div>
-				<div className={s.blog__bottom}>
+				<div className={s.blog__center}>
 					<div className={s.banner}>
 						<Image className={s.banner__img} src={Icon} alt='Icon' />
 						<div className={s.banner__title}>Explore San Francisco Luxury</div>
@@ -79,6 +79,36 @@ const index = () => {
 						</div>
 					</div>
 				</div>
+				<div className={s.blog__bottom}>
+					<ul className={s.item}>
+						<li ><b>Archive</b></li>
+						<li>April 2022</li>
+						<li>March 2022</li>
+						<li>February 2022</li>
+						<li>January 2022</li>
+						<li>December 2021</li>
+					</ul>
+					<ul className={s.item}>
+						<li ><b>Category</b></li>
+						<li>Lorem ipsum</li>
+						<li>Lorem ipsum ipsum</li>
+						<li>Lorem ipsum</li>
+						<li>Lorem ipsum</li>
+						<li>Lorem ipsum</li>
+					</ul>
+					<ul className={s.item}>
+						<li ><b>Tags</b></li>
+						<li>
+							@candelightnapa @candlelight @candlelightnapa award winning bed and
+							breakfast napa california calistoga candle candlelightinn candlelight inn Candlelight Inn Napa Valley classic
+							bed and breakfast napa concierge directions to napa Downtown Napa fun hike hotel napa valley love napa b&b
+							napa bed and breakfast napa hotel napa hotels napa inn napa river Napa Valley napa valley lodging napa valley
+							marathon Napa Valley wine tours napa wine oxbow market places to stay place to stay sales on wines sonoma st.
+							helena travel tripadvisor tripadvisor awards wine wine country wine tasting wine tours wine train yountville
+						</li>
+					</ul>
+				</div>
+
 			</section>
 		</>
 	)

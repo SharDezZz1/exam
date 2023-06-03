@@ -8,6 +8,7 @@ import Guestrooms from '@/components/Guestrooms/Guestrooms'
 import Hero from '@/components/Hero'
 import Decoration from '@/components/Decoration/Decoration'
 import PanelSection from '@/components/PanelSection/PanelSection'
+import NearbyUs from '@/components/NearbyUs/NearbyUs'
 
 // library Semantic UI
 // import 'semantic-ui-css/semantic.min.css'
@@ -24,12 +25,13 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={`${styles.main} ${inter.className}`}>
-                <Hero></Hero>
+				<Hero></Hero>
 				<HotelAmenities />
 				<Guestrooms />
-				<Decoration/>
-				<PanelSection/>
-				<Decoration/>
+				<Decoration />
+				<PanelSection />
+				<Decoration />
+				<NearbyUs />
 			</main>
 		</>
 	)

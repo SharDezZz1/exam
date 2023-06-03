@@ -39,7 +39,9 @@
 .swiper__navigation {
 	display: flex;
 	justify-content: center;
-	gap: 25px;
+	gap: 60px;
+	z-index: 2;
+	position: relative;
 }
 .swiper__title {
 	text-align: center;
@@ -113,4 +115,13 @@
 .image__overlay button:hover {
 	border-radius: 30px;
 	background-color: #91834d;
+}
+
+.swiper__container {
+	:global(.swiper-pagination) {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top: 26px;
+	}
 }

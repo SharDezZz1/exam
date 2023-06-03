@@ -41,7 +41,7 @@ const Header = () => {
 						</Link>
 					</li>
 					<li className={s.nav__item}>
-						<Link className={s.nav__item_link} href="/rooms">
+						<Link className={s.nav__item_link} href="/Rooms">
 							ROOMS
 						</Link>
 					</li>

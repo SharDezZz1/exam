@@ -29,6 +29,7 @@ export default function Home() {
 				<Guestrooms />
 				<Decoration/>
 				<PanelSection/>
+				<Decoration/>
 			</main>
 		</>
 	)

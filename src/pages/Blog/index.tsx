@@ -34,7 +34,7 @@ const index = () => {
 							<div className={s.card__overlay}>
 								<div className={s.card__date}>December 23, 2022</div>
 								<p className={s.card__text}>Lorem ipsum dolor sit amet consectetur. Ullamcorper.</p>
-								<Link className={s.card__link} href="/">Read more</Link>
+								<Link className={s.card__link} href="/Blog/2">Read more</Link>
 							</div>
 						</div>
 						<div className={s.card}>

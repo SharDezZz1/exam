@@ -1,4 +1,4 @@
-.amenities {
+.discover {
 	margin-bottom: 100px;
 	&__top {
 		img {
@@ -53,7 +53,6 @@
 			}
 		}
 	}
-
 	&__bottom {
 		display: grid;
 		margin-top: 150px;
@@ -77,16 +76,17 @@
 			}
 		}
 		.info {
+			color: #213357;
 			width: 616px;
 			margin: 0 auto;
 			padding-top: 30px;
 			text-align: left;
-			color: #213357;
+			margin-top: 140px;
 			@media only screen and (max-width: 1250px) {
 				width: 100%;
 				padding: 0 15px;
 			}
-				&__title {
+			&__title {
 				letter-spacing: 0.2em;
 				text-transform: uppercase;
 			}

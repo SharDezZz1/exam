@@ -26,7 +26,7 @@ const Header = () => {
 				</div>
 				<ul className={s.nav}>
 					<li className={s.nav__item}>
-						<Link className={s.nav__item_link} href="/discover">
+						<Link className={s.nav__item_link} href="/Discover">
 							DISCOVER
 						</Link>
 					</li>
@@ -51,7 +51,7 @@ const Header = () => {
 						</Link>
 					</li>
 					<li className={s.nav__item}>
-						<Link className={s.nav__item_link} href="/history">
+						<Link className={s.nav__item_link} href="/History">
 							HISTORY
 						</Link>
 					</li>

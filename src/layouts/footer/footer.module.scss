@@ -122,6 +122,21 @@
 				flex-direction: column;
 				align-items: center;
 			}
+			a {
+				text-decoration: none;
+				color: #fff;
+				text-transform: uppercase;
+				cursor: pointer;
+				font-size: 13px;
+				font-weight: 500;
+				transition: color 0.2s ease-in;
+				&:hover {
+					color: #bab7b7;
+				}
+				@media only screen and (max-width: 992px) {
+					font-size: 18px;
+				}
+			}
 
 			li {
 				font-size: 13px;
@@ -129,13 +144,6 @@
 				font-style: normal;
 				text-transform: uppercase;
 				cursor: pointer;
-				transition: color .2s ease-in;
-				&:hover{
-					color: #bab7b7;
-				}
-				@media only screen and (max-width: 992px) {
-					font-size: 18px;
-				}
 			}
 		}
 		&_copyright {

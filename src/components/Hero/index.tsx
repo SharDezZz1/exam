@@ -13,19 +13,16 @@ import { url } from 'inspector'
 
 
 const Hero = (props: any) => {
-    const { children } = props.children
-    console.log(props)
     return (
         <>
-            <section className={s.hero}
-            >
+            <section className={s.hero}>
                 <div></div>
                 <div className={s.hero__title}>
-                    {/* <Image alt={""} src={props.img1}></Image>
-                    <h1 className={s.hero__title_text}>{props.title}</h1>
-                    <Image alt={""} src={props.img2}></Image> */}
+                    <Image alt={""} src={vec1} ></Image>
+                    <h1 className={s.hero__title_text}>European romance comes to Nob Hill</h1>
+                    <Image alt={""} src={vec2} ></Image>
                 </div>
-                {children}
+                <CheckAvailability></CheckAvailability>
             </section>
         </>
     )

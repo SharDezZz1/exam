@@ -30,7 +30,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={`${styles.main} ${inter.className}`}>
-				<Hero title={heros[0].title} img1={heros[0].img1} img2={heros[0].img2} bg={heros[0].bg}>
+				<Hero>
 					<CheckAvailability></CheckAvailability>
 				</Hero>
 				<HotelAmenities />

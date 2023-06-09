@@ -18,9 +18,9 @@ const initialState: HerosState = {
         {
             id: 1,
             title: 'Cozy Queen',
-            img1: '@/assets/hero/Vector-1.png',
-            img2: '@/assets/hero/Vector.png',
-            bg: "@/assets/hero/bg.png",
+            img1: '/assets/hero/Vector-1.png',
+            img2: '/assets/hero/Vector.png',
+            bg: "/assets/hero/bg.png",
         },
     ],
 };

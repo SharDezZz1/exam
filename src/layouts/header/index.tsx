@@ -7,7 +7,6 @@ import Link from 'next/link'
 import logo from '../../assets/Layouts/header/Group 4578.svg'
 
 //components
-import BurgerMenu from '@/components/Burger'
 
 const Header = () => {
 

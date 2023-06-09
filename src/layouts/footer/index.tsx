@@ -64,32 +64,41 @@ const Footer = () => {
 							join our newsletter
 						</button>
 					</form>
-					{/* <form className={s.footer__center_registration} onSubmit={handleSubmit}>
-						<input
-							type="text"
-							className={inputClassName}
-							placeholder="Email"
-							value={email}
-							onChange={handleInputChange}
-						/>
-						<button type="submit" className={s.registration__button}>
-							join our newsletter
-						</button>
-					</form> */}
-
-					{/* <div className={s.footer__center_registration}>
-						<input type="text" className={s.registration__input} placeholder="Email" />
-						<button className={s.registration__button}>join our newsletter</button>
-					</div> */}
 					<ul className={s.footer__center_nav}>
-						<li>Discover</li>
-						<li>Specials</li>
-						<li>Blog</li>
-						<li>Rooms</li>
-						<li>Amenities</li>
-						<li>HISTORY</li>
-						<li>contact</li>
-						<li>hotel polities</li>
+						<li className={s.nav__item}>
+							<Link className={s.nav__item_link} href="/Discover">
+								DISCOVER
+							</Link>
+						</li>
+						<Link className={s.nav__item_link} href="/Specials">
+							SPECIALS
+						</Link>
+						<li className={s.nav__item}>
+							<Link className={s.nav__item_link} href="/Blog">
+								BLOG
+							</Link>
+						</li>
+						<li className={s.nav__item}>
+							<Link className={s.nav__item_link} href="/Rooms">
+								ROOMS
+							</Link>
+						</li>
+						<li className={s.nav__item}>
+							<Link className={s.nav__item_link} href="/Amenities">
+								AMENITIES
+							</Link>
+						</li>
+						<li className={s.nav__item}>
+							<Link className={s.nav__item_link} href="/History">
+								HISTORY
+							</Link>
+						</li>
+						<li className={s.nav__item}>
+							<Link className={s.nav__item_link} href="/ContactUs">
+								CONTACT
+							</Link>
+						</li>
+						{/* <li>hotel polities</li> */}
 					</ul>
 					<div className={s.footer__center_copyright}>
 						<p>© 2023. Cornell. All Rights Reserved</p>
@@ -106,7 +115,7 @@ const Footer = () => {
 						</div>
 						<div className={s.footer__right_social}>
 							<Link className={s.social__item} href="/"><Image src={Twitter} alt="Twitter" /></Link>
-							<Link className={s.social__item} href="/"><Image  src={Instagram} alt="Instagram" /></Link>
+							<Link className={s.social__item} href="/"><Image src={Instagram} alt="Instagram" /></Link>
 							<Link className={s.social__item} href="/"><Image src={FaceBook} alt="FaceBook" /></Link>
 						</div>
 					</div>

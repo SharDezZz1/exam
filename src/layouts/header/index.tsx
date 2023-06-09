@@ -20,13 +20,12 @@ const Header = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <header className={s.header}>
-                <div className='hidden md:flex'><BurgerMenu/></div>
                 <div className={s.logo}>
                     <Link href='/' >
                         <Image src={logo} alt='logo'></Image>
                     </Link>
                 </div>
-                <ul className={`${s.nav} ${'flex md:hidden'}`}>
+                <ul className={`${s.nav}`}>
                     <li className={s.nav__item}>
                         <Link className={s.nav__item_link} href="/discover">
                             DISCOVER

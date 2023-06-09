@@ -8,6 +8,10 @@ import Guestrooms from '@/components/Guestrooms/Guestrooms'
 import Hero from '@/components/Hero'
 import Decoration from '@/components/Decoration/Decoration'
 import PanelSection from '@/components/PanelSection/PanelSection'
+import CheckAvailability from '@/components/CheckAvailability'
+//redux
+import { useSelector } from 'react-redux'
+
 
 // library Semantic UI
 // import 'semantic-ui-css/semantic.min.css'
@@ -15,6 +19,8 @@ import PanelSection from '@/components/PanelSection/PanelSection'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+	const heros = useSelector((state: any) => state.heros.value)
+
 	return (
 		<>
 			<Head>
@@ -24,12 +30,14 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={`${styles.main} ${inter.className}`}>
-                <Hero></Hero>
+				<Hero>
+					<CheckAvailability></CheckAvailability>
+				</Hero>
 				<HotelAmenities />
 				<Guestrooms />
-				<Decoration/>
-				<PanelSection/>
-				<Decoration/>
+				<Decoration />
+				<PanelSection />
+				<Decoration />
 			</main>
 		</>
 	)

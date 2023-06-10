@@ -24,6 +24,11 @@ const Header = () => {
                         <Image src={logo} alt='logo'></Image>
                     </Link>
                 </div>
+
+                <button className={s.nav_btn} onClick={() => {
+                    window.scrollTo(0, 10000)
+                }}>Navigation</button>
+
                 <ul className={`${s.nav}`}>
                     <li className={s.nav__item}>
                         <Link className={s.nav__item_link} href="/Discover">

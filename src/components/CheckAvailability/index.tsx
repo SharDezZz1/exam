@@ -51,7 +51,7 @@ const CheckAvailability = () => {
       <div className={s.available}>
         <form action="" onSubmit={onSubmit} className={s.form}>
           <div></div>
-
+    
           <div className={s.form__block}>
             <label className={s.form__block_label}>Arrival date</label>
             <input className={`${s.form__block_input} ${errors?.ArrivalDate ? s.error : ''}`} type="date" {...register("ArrivalDate")}

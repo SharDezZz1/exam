@@ -1,6 +1,10 @@
 import React from 'react'
 import s from './Blog.module.scss'
 import Link from 'next/link'
+//redux
+import { useSelector } from 'react-redux'
+//components
+import Blog from "@/components/Blog"
 
 // img
 import Image from 'next/image'
@@ -8,9 +12,11 @@ import Image from 'next/image'
 import BlogHeader from '../../assets/Blog/Blog__header.png'
 import Icon from '../../assets/Blog/Icon.svg'
 import BlogCard from '../../assets/Blog/BlogCard.png'
+import { selectBlog } from '@/store/features/Blog'
 
 
 const index = () => {
+	const blogs = useSelector(selectBlog)
 	return (
 		<>
 			<section className={s.blog}>
@@ -29,54 +35,11 @@ const index = () => {
 						</div>
 					</div>
 					<div className={s.cards}>
-						<div className={s.card}>
-							<Image className={s.card__img} src={BlogCard} alt='BlogCard' />
-							<div className={s.card__overlay}>
-								<div className={s.card__date}>December 23, 2022</div>
-								<p className={s.card__text}>Lorem ipsum dolor sit amet consectetur. Ullamcorper.</p>
-								<Link className={s.card__link} href="/Blog/2">Read more</Link>
-							</div>
-						</div>
-						<div className={s.card}>
-							<Image className={s.card__img} src={BlogCard} alt='BlogCard' />
-							<div className={s.card__overlay}>
-								<div className={s.card__date}>December 23, 2022</div>
-								<p className={s.card__text}>Lorem ipsum dolor sit amet consectetur. Ullamcorper.</p>
-								<Link className={s.card__link} href="/">Read more</Link>
-							</div>
-						</div>
-						<div className={s.card}>
-							<Image className={s.card__img} src={BlogCard} alt='BlogCard' />
-							<div className={s.card__overlay}>
-								<div className={s.card__date}>December 23, 2022</div>
-								<p className={s.card__text}>Lorem ipsum dolor sit amet consectetur. Ullamcorper.</p>
-								<Link className={s.card__link} href="/">Read more</Link>
-							</div>
-						</div>
-						<div className={s.card}>
-							<Image className={s.card__img} src={BlogCard} alt='BlogCard' />
-							<div className={s.card__overlay}>
-								<div className={s.card__date}>December 23, 2022</div>
-								<p className={s.card__text}>Lorem ipsum dolor sit amet consectetur. Ullamcorper.</p>
-								<Link className={s.card__link} href="/">Read more</Link>
-							</div>
-						</div>
-						<div className={s.card}>
-							<Image className={s.card__img} src={BlogCard} alt='BlogCard' />
-							<div className={s.card__overlay}>
-								<div className={s.card__date}>December 23, 2022</div>
-								<p className={s.card__text}>Lorem ipsum dolor sit amet consectetur. Ullamcorper.</p>
-								<Link className={s.card__link} href="/">Read more</Link>
-							</div>
-						</div>
-						<div className={s.card}>
-							<Image className={s.card__img} src={BlogCard} alt='BlogCard' />
-							<div className={s.card__overlay}>
-								<div className={s.card__date}>December 23, 2022</div>
-								<p className={s.card__text}>Lorem ipsum dolor sit amet consectetur. Ullamcorper.</p>
-								<Link className={s.card__link} href="/">Read more</Link>
-							</div>
-						</div>
+						{blogs.map((blog:any) => {
+							return(
+								<Blog date={blog.date} text={blog.text} id={blog.id}></Blog>
+							)
+						})}	
 					</div>
 				</div>
 				<div className={s.blog__bottom}>

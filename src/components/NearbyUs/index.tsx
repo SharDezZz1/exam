@@ -3,7 +3,7 @@ import s from './NearbyUs.module.scss'
 
 import React, { useState } from "react";
 import Image from "next/image";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import iconTop from "../../assets/MainPage/NearbyUs/iconSwiper.svg";
@@ -12,7 +12,7 @@ import SwiperArrowNext from '../../assets/MainPage/NearbyUs/SwiperArrowNext.svg'
 import Link from "next/link";
 import SwiperImage from "../../assets/MainPage/NearbyUs/ImgSwiper.png";
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const NearbyUs = () => {
 	const [activeIndex, setActiveIndex] = useState(-1);
@@ -67,9 +67,10 @@ const NearbyUs = () => {
 						slidesPerView={4}
 						spaceBetween={26}
 						navigation={customNavigation}
+						autoplay={{ delay: 4000 }}
 						// pagination={{ type: "fraction" }}
 						className={s.swiper}
-					
+
 
 						breakpoints={{
 							320: {

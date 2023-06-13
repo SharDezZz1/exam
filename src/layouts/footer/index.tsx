@@ -47,9 +47,9 @@ const Footer = () => {
 	return (
 		<>
 			<footer className={s.footer}>
-				<div className={s.footer__left}>
+				<Link href='/' className={s.footer__left}>
 					<Image src={FooterLogo} alt="Cornell" />
-				</div>
+				</Link>
 				<div className={s.footer__center}>
 					<form className={s.footer__center_registration} onSubmit={onSubmit}>
 						<div>
@@ -108,15 +108,15 @@ const Footer = () => {
 					<div className={s.footer__right_wrapper}>
 						<div>
 							<ul>
-								<li>805-772-4437</li>
-								<li>Cornell Hotel de France</li>
-								<li>715 Bush Street, San Francisco, 94108</li>
+								<Link href="tel:8057724437">805-772-4437</Link>
+								<Link href="/">Cornell Hotel de France</Link>
+								<Link href="https://www.google.com/maps?q=715+Bush+Street,+San+Francisco,+94108" target="_blank">715 Bush Street, San Francisco, 94108</Link>
 							</ul>
 						</div>
 						<div className={s.footer__right_social}>
-							<Link className={s.social__item} href="/"><Image src={Twitter} alt="Twitter" /></Link>
-							<Link className={s.social__item} href="/"><Image src={Instagram} alt="Instagram" /></Link>
-							<Link className={s.social__item} href="/"><Image src={FaceBook} alt="FaceBook" /></Link>
+							<Link className={s.social__item} href="https://www.twitter.com" target="_blank"><Image src={Twitter} alt="Twitter" /></Link>
+							<Link className={s.social__item} href="https://www.instagram.com" target="_blank"><Image src={Instagram} alt="Instagram" /></Link>
+							<Link className={s.social__item} href="https://www.facebook.com" target="_blank"><Image src={FaceBook} alt="FaceBook" /></Link>
 						</div>
 					</div>
 					<div className={s.footer__right_copyright}>

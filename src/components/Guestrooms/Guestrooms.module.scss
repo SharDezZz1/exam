@@ -2,12 +2,19 @@
 	background-image: url("../../assets/MainPage/Guestrooms/background.png");
 	background-size: cover;
 	height: 130vh;
+	@media only screen and (max-width: 576px) {
+		height: 100%;
+		margin-bottom: 30px;
+	}
 }
 .title {
 	display: flex;
 	justify-content: center;
 	position: relative;
 	top: 225px;
+	@media only screen and (max-width: 568px) {
+		top: 30px;
+	}
 	img {
 		@media only screen and (max-width: 768px) {
 			width: 80%;
@@ -18,8 +25,9 @@
 	margin: 0 24px;
 	margin-top: 300px;
 	@media only screen and (max-width: 568px) {
-		margin-top: 200px;
+		margin-top: 50px;
 	}
+
 }
 .swiper {
 	width: 100%;
@@ -42,6 +50,9 @@
 	gap: 60px;
 	z-index: 2;
 	position: relative;
+	img {
+		cursor: pointer;
+	}
 }
 .swiper__title {
 	text-align: center;
@@ -109,10 +120,11 @@
 	border: none;
 	cursor: pointer;
 	text-transform: uppercase;
-	transition: background-color 0.4s ease-in, border-radius 0.1s ease-in-out;
+	transition: background-color 0.4s ease-in, border-radius 0.3s ease-in-out;
 }
 
-.image__overlay button:hover {
+.image__overlay button:hover,
+.image__overlay button:focus {
 	border-radius: 30px;
 	background-color: #91834d;
 }

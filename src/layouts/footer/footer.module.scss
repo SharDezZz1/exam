@@ -176,6 +176,14 @@
 			gap: 17px;
 			flex-direction: column;
 			display: flex;
+			a{
+				text-decoration: none;
+				color: #ffffff;
+				transition: color .2s ease-in;
+				&:hover{
+					color: rgb(215, 210, 210);
+				}
+			}
 		}
 		&_social {
 			margin-top: 60px;

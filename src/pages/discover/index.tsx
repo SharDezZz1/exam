@@ -1,15 +1,17 @@
 import React from 'react'
 import s from './Discover.module.scss'
-
-// img
+import title from '../../assets/discover/Frame 4820.svg'
+//images
+import Icon from '../../assets/Specials/Icon.svg'
 import Image from 'next/image'
 import HeaderImg from '../../assets/Discover/headerImg.png'
 import icon from '../../assets/Discover/Icon.svg'
 import PanelImg from '../../assets/Discover/bottomImg.png'
 
 import DiscoverSectionMobile from './DiscoverSectionMobile/DiscoverSectionMobile'
+//components
 
-const index = () => {
+const Discover = () => {
 	return (
 		<>
 			<section className={s.discover}>
@@ -55,4 +57,4 @@ const index = () => {
 	)
 }
 
-export default index
+export default Discover
